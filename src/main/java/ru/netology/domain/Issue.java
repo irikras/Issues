@@ -14,7 +14,7 @@ public class Issue {
     private String name;
     private Status status;
     private String author;
-    private Set<Label> setLabel = new HashSet<>();
+    private Label label;
     private String projects;
     private String milestones;
     private Set<Assignee> assigneeSet = new HashSet<>();
@@ -28,7 +28,7 @@ public class Issue {
         this.name = name;
         this.status = status;
         this.author = author;
-        this.setLabel.add(label);
+        this.label = label;
         this.milestones = milestones;
         this.assigneeSet.add(assignee);
         this.date = date;
@@ -43,6 +43,14 @@ public class Issue {
 
     public Status getStatus() {
         return status;
+    }
+
+    public void setLabel(Label label) {
+        this.label = label;
+    }
+
+    public Label getLabel() {
+        return label;
     }
 }
 

@@ -5,15 +5,16 @@ import ru.netology.domain.Issue;
 import ru.netology.domain.Status;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class IssueRepository {
-    ArrayList<Issue> issues = new ArrayList<>();
+    private Collection<Issue> issues = new ArrayList<>();
 
     public void save(Issue issue) {
         issues.add(issue);
     }
 
-    public ArrayList<Issue> findAll() {
+    public Collection<Issue> findAll() {
         return issues;
     }
 
